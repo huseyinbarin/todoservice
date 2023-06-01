@@ -13,7 +13,7 @@ class RandomDataService(
 
   private val RANDOM_USER_API = "https://randomuser.me/api/"
 
-  private fun fetchRandomUserData(user: User): User {
+  internal fun fetchRandomUserData(user: User): User {
     val response =
       restTemplate.getForObject(RANDOM_USER_API, RandomUserDataResponse::class.java)
     return response?.results?.first()?.let { result ->

@@ -6,10 +6,12 @@ import org.springframework.stereotype.Service
 import java.util.UUID
 
 @Service
-class UserService(private val userDataSource: UserDataSource) {
+class UserService(private val userDataSource: UserDataSource,val randomDataService: RandomDataService) {
 
   fun getUserById(userId: UUID): User {
-    return userDataSource.getUserById(userId)
+    val user = userDataSource.getUserById(userId)
+    randomDataService.fetchRandomUserData(user)
+    return user
   }
 
   fun removeUser(userId: UUID) {

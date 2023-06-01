@@ -7,6 +7,7 @@ data class Task(
   var name: String = "",
   var description: String = "",
   var user: UUID,
-  var status: TaskStatus
+  var status: TaskStatus,
+  var userDetail: String = ""
 )
 

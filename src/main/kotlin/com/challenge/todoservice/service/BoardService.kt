@@ -30,7 +30,7 @@ class BoardService(
 
     val enrichedTasks = board.tasks.map { task ->
       val user = userService.getUserById(task.user)
-      task.copy(user = user.id)
+      task.copy(userDetail = user.toString())
     }
 
     return board.copy(tasks = enrichedTasks.toMutableList())
