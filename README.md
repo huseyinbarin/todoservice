@@ -42,7 +42,7 @@ Additionally, the ToDo Service listens for a webhook `/webhooks/user-deleted` to
 ```
 ## Technologies Used
 
-The Computer Management System is built using the following technologies:
+The Todo service is built using the following technologies:
 
 - Kotlin: The programming language used for the backend development.
 - Spring Boot: The framework used to create the RESTful API and manage application components.
