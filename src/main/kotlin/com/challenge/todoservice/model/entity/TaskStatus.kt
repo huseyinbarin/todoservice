@@ -1,4 +1,4 @@
-package com.challenge.todoservice.model
+package com.challenge.todoservice.model.entity
 
 enum class TaskStatus {
   CREATED,
